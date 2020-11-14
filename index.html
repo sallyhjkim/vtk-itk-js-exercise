@@ -6,33 +6,48 @@
         <title>vtkjs test</title>
         <script type="text/javascript" src="./dist/MyWebApp.js"></script>
         <style>
+            body {
+                width: 100%;
+                height: 100%;
+                background-color: black;
+            }
+            #paneContainer {
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+                position: fixed;
+                top: 40px;
+                left: 0;
+            }
             #vtkPane1 {
-                border: 1px solid red;
-                width: 500px;
-                height: 500px;
+                border: 1px solid wheat;
             }
             #vtkPane2 {
                 border: 1px solid green;
-                width: 500px;
-                height: 500px;
             }
             #vtkPane3 {
-                border: 1px solid blue;
-                width: 500px;
-                height: 500px;
+                border: 1px solid red;
             }
             #vtkPane4 {
-                border: 1px solid yellowgreen;
+                border: 1px solid blue;
+            }
+            .vtkPane {
+                float: left;
                 width: 500px;
                 height: 500px;
             }
         </style>
     </head>
     <body>
-        <div id="vtkPane1"></div>
-        <div id="vtkPane2"></div>
-        <div id="vtkPane3"></div>
-        <div id="vtkPane4"></div>
-        <input type="file" class="inputFile" />
+        <span>vr:</span>
+        <input type="file" id="vrInputFile" />
+        <span>dicom:</span>
+        <input type="file" id="dcmInputFile" />
+        <div id="paneContainer">
+            <div id="vtkPane1" class="vtkPane"></div>
+            <div id="vtkPane2" class="vtkPane"></div>
+            <div id="vtkPane3" class="vtkPane"></div>
+            <div id="vtkPane4" class="vtkPane"></div>
+        </div>
     </body>
 </html>
